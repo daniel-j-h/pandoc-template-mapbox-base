@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta charset=utf-8 />
+  <title>$title$</title>
+  <style type="text/css">
+$highlighting-css$
+  </style>
+  <link rel="stylesheet" href="https://www.mapbox.com/base/latest/base.css">
+</head>
+<body>
+  <div class='grid fill-light'>
+    <div class='col12 pad4 center fill-denim dark'>
+      <h2>$title$</h2>
+    </div>
+    <div class='col12 clearfix'>
+      <nav class='col3 v' id="$idprefix$TOC">
+$toc$
+      </nav>
+      <div class='col9 pad4 fill-white prose'>
+$body$
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+    for (each of document.querySelectorAll('#TOC a'))
+      each.className += 'block pad1y pad2x keyline-bottom';
+    })();
+  </script>
+</body>
+</html>
